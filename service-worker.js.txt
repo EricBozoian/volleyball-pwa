@@ -1,20 +1,22 @@
-// service-worker.js
-self.addEventListener('install', event => {
+// Service Worker
+
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('volleyball-events-cache').then(cache => {
+    caches.open('volleyball-pwa-cache').then((cache) => {
       return cache.addAll([
         '/',
-        'https://events.humanitix.com/host/southern-nh-competitive-volleyball',
-        'https://username.github.io/volleyball-pwa/icon-192x192.png',
-        'https://username.github.io/volleyball-pwa/icon-512x512.png'
+        '/index.html',
+        '/manifest.json',
+        '/SNHCVB%20app%20192x192.png',
+        '/SNHCVB%20app%20512x512.png'
       ]);
     })
   );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then(response => {
+    caches.match(event.request).then((response) => {
       return response || fetch(event.request);
     })
   );
