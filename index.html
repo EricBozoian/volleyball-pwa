@@ -7,10 +7,27 @@
   <title>Redirecting...</title>
   <link rel="manifest" href="manifest.json">
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => console.log('Service Worker Registered'));
-    }
+    let deferredPrompt;
+
+    // Listen for the beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the default mini-infobar prompt
+      e.preventDefault();
+      deferredPrompt = e;
+
+      // Automatically show the prompt after 3 seconds
+      setTimeout(() => {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      }, 3000); // 3 seconds delay to trigger the prompt
+    });
   </script>
 </head>
 <body>
