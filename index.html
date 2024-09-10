@@ -3,35 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Redirects after 30 seconds to give time for the install prompt -->
+  <!-- Redirects after 30 seconds to give time for the user to click the install button -->
   <meta http-equiv="refresh" content="30; url=https://events.humanitix.com/host/southern-nh-competitive-volleyball?fbclid=IwY2xjawFGsRpleHRuA2FlbQIxMAABHWRZNaPlCmda_KvusK5aSH5JVYr9ZoSYUHCtO2bgfp4MUFJumsSD-_f8Wg_aem_y4rNHtiwMYvyLbewIrEzOA">
-  <title>Redirecting...</title>
+  <title>Install Southern NH Volleyball PWA</title>
   <link rel="manifest" href="manifest.json">
   <script>
     let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
 
     // Listen for the beforeinstallprompt event
     window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the default mini-infobar prompt
+      // Prevent the default mini-infobar from appearing
       e.preventDefault();
       deferredPrompt = e;
+      
+      // Show the install button
+      installBtn.style.display = 'block';
 
-      // Automatically show the prompt after 3 seconds
-      setTimeout(() => {
+      installBtn.addEventListener('click', () => {
+        // Show the install prompt
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
+            console.log('User accepted the install prompt');
           } else {
-            console.log('User dismissed the A2HS prompt');
+            console.log('User dismissed the install prompt');
           }
           deferredPrompt = null;
         });
-      }, 3000); // Delay of 3 seconds before showing the install prompt
+      });
     });
   </script>
+  <style>
+    #installBtn {
+      display: none;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 20px;
+    }
+    #installBtn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
   <p>The page is redirecting in 30 seconds. If you are not redirected, <a href="https://events.humanitix.com/host/southern-nh-competitive-volleyball?fbclid=IwY2xjawFGsRpleHRuA2FlbQIxMAABHWRZNaPlCmda_KvusK5aSH5JVYr9ZoSYUHCtO2bgfp4MUFJumsSD-_f8Wg_aem_y4rNHtiwMYvyLbewIrEzOA">click here</a>.</p>
+
+  <!-- Install Button -->
+  <button id="installBtn">Install Southern NH Volleyball PWA</button>
 </body>
 </html>
