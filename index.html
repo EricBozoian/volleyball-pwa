@@ -3,25 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Redirects after 30 seconds to give time for the user to click the install button -->
-  <meta http-equiv="refresh" content="30; url=https://events.humanitix.com/host/southern-nh-competitive-volleyball?fbclid=IwY2xjawFGsRpleHRuA2FlbQIxMAABHWRZNaPlCmda_KvusK5aSH5JVYr9ZoSYUHCtO2bgfp4MUFJumsSD-_f8Wg_aem_y4rNHtiwMYvyLbewIrEzOA">
-  <title>Install Southern NH Volleyball PWA</title>
+  <meta http-equiv="refresh" content="30; url=https://events.humanitix.com/host/southern-nh-competitive-volleyball">
   <link rel="manifest" href="manifest.json">
+  <title>Redirecting...</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch((error) => console.log('Service Worker registration failed: ', error));
+    }
+  </script>
+  <style>
+    #installBtn {
+      display: none;
+      background-color: #000000;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Southern NH Volleyball!</h1>
+  <p>This is the Progressive Web App for Southern NH Competitive Volleyball.</p>
+
+  <button id="installBtn">Install Southern NH Volleyball PWA</button>
+
   <script>
     let deferredPrompt;
     const installBtn = document.getElementById('installBtn');
-
-    // Listen for the beforeinstallprompt event
+    
     window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the default mini-infobar from appearing
       e.preventDefault();
       deferredPrompt = e;
-      
-      // Show the install button
       installBtn.style.display = 'block';
 
       installBtn.addEventListener('click', () => {
-        // Show the install prompt
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
@@ -34,27 +52,7 @@
       });
     });
   </script>
-  <style>
-    #installBtn {
-      display: none;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      margin: 20px;
-    }
-    #installBtn:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <p>The page is redirecting in 30 seconds. If you are not redirected, <a href="https://events.humanitix.com/host/southern-nh-competitive-volleyball?fbclid=IwY2xjawFGsRpleHRuA2FlbQIxMAABHWRZNaPlCmda_KvusK5aSH5JVYr9ZoSYUHCtO2bgfp4MUFJumsSD-_f8Wg_aem_y4rNHtiwMYvyLbewIrEzOA">click here</a>.</p>
 
-  <!-- Install Button -->
-  <button id="installBtn">Install Southern NH Volleyball PWA</button>
+  <p>The page is redirecting in 30 seconds. If you are not redirected, <a href="https://events.humanitix.com/host/southern-nh-competitive-volleyball">click here</a>.</p>
 </body>
 </html>
