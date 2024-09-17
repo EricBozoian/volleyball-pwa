@@ -1,86 +1,77 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
 }
 
 header {
+    background-color: #ffffff;
     padding: 20px;
+    border-bottom: 2px solid #dedede;
 }
 
 .logo {
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
-    padding: 10px;
+    width: 120px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #003366;
+    font-size: 28px;
+    color: #002855;
 }
 
-p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.button-section {
+.events-button-container {
     margin: 20px 0;
 }
 
 .events-button {
-    padding: 15px 30px;
-    background-color: #003366;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #002855;
     color: #ffffff;
-    font-size: 1.5em;
-    border: none;
+    text-decoration: none;
+    font-size: 18px;
     border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 15px;
 }
 
 .events-button:hover {
-    background-color: #002244;
+    background-color: #001f3f;
 }
 
-.news-updates {
-    background-color: #f7f7f7;
+.news-section {
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px;
+    background-color: #ffffff;
     border-radius: 10px;
-    width: 90%;
-    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 2em;
-    color: #003366;
-    margin-bottom: 15px;
+    color: #002855;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.event {
-    background-color: #ffffff;
+.news-item {
+    text-align: left;
+    margin-bottom: 30px;
     padding: 15px;
-    margin-bottom: 10px;
-    border: 2px solid #003366;
-    border-radius: 5px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
 }
 
-.event h3 {
-    color: #cc0000;
-    font-size: 1.5em;
-    margin-bottom: 5px;
+.news-item h3 {
+    color: #002855;
+    font-size: 20px;
 }
 
-.event p {
-    font-size: 1.1em;
-    margin: 5px 0;
+.news-item p {
+    color: #333;
+    font-size: 16px;
+}
+
+.news-item strong {
+    font-weight: bold;
 }
