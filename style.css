@@ -32,13 +32,20 @@ p {
 }
 
 .event-button {
-    background-color: #002366;
-    color: white;
-    padding: 15px 30px;
+    background-color: #002f66; /* Same dark blue as the logo */
+    color: #ffffff; /* White text */
+    padding: 15px 30px; /* Larger padding for bigger button */
+    font-size: 18px; /* Larger text */
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
     cursor: pointer;
+    margin: 10px 0;
+    display: block;
+    width: 200px; /* Increase button width */
+    text-align: center;
+}
+button:hover {
+    background-color: #001a40; /* Slightly darker blue on hover */
 }
 
 .event-button:hover {
