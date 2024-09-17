@@ -1,111 +1,84 @@
-/* Base reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General page styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    width: 100px;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #0d355a;
+    font-size: 2em;
+    color: #003366;
 }
 
 p {
-    font-size: 1.2rem;
+    color: #666;
+    font-size: 1em;
 }
 
-nav {
-    text-align: center;
+.btn {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: inline-block;
     margin-bottom: 20px;
 }
 
-.button {
-    background-color: #0d355a;
-    color: #fff;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
+.btn:hover {
+    background-color: #00509e;
 }
 
-main h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.updates {
+    margin-top: 20px;
 }
 
 .event {
-    background-color: white;
-    border: 2px solid #0d355a;
+    background-color: #fff;
+    border: 2px solid #ccc;
     border-radius: 5px;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.event h3 {
-    font-size: 1.5rem;
-    color: #0d355a;
-}
-
-.event p {
-    font-size: 1.1rem;
-}
-
-a {
-    color: #0d355a;
+.event a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    .event {
-        padding: 10px;
-    }
-
-    .event h3 {
-        font-size: 1.3rem;
-    }
-
-    .event p {
-        font-size: 1rem;
-    }
-
-    .logo {
-        width: 80px;
-    }
+.event p {
+    font-size: 1em;
+    color: #333;
 }
