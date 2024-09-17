@@ -1,88 +1,86 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
 }
 
 header {
-    background-color: #ffffff;
     padding: 20px;
-    border-bottom: 2px solid #ccc;
 }
 
 .logo {
-    width: 150px; /* Increase this size */
-    height: auto;
-    display: block;
+    max-width: 200px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    display: block;
+    padding: 10px;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #002366;
-    margin-bottom: 0.5rem;
+    font-size: 2.5em;
+    color: #003366;
 }
 
 p {
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
-.event-button {
-    background-color: #002f66; /* Same dark blue as the logo */
-    color: #ffffff; /* White text */
-    padding: 15px 30px; /* Larger padding for bigger button */
-    font-size: 18px; /* Larger text */
+.button-section {
+    margin: 20px 0;
+}
+
+.events-button {
+    padding: 15px 30px;
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 1.5em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px 0;
-    display: block;
-    width: 200px; /* Increase button width */
-    text-align: center;
-}
-button:hover {
-    background-color: #001a40; /* Slightly darker blue on hover */
+    margin-bottom: 15px;
 }
 
-.event-button:hover {
-    background-color: #004080;
+.events-button:hover {
+    background-color: #002244;
 }
 
-.updates {
-    margin-top: 20px;
+.news-updates {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: #002366;
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 15px;
 }
 
-.update {
-    background-color: #f9f9f9;
-    margin: 20px auto;
-    padding: 10px;
-    width: 90%;
-    max-width: 600px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+.event {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #003366;
+    border-radius: 5px;
 }
 
-.update h3 {
-    color: #c8102e;
-    font-size: 1.5rem;
+.event h3 {
+    color: #cc0000;
+    font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
-.update p {
-    color: #000;
-}
-
-footer {
-    background-color: #002366;
-    color: white;
-    padding: 10px;
-    font-size: 0.9rem;
+.event p {
+    font-size: 1.1em;
+    margin: 5px 0;
 }
