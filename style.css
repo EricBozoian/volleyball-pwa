@@ -1,14 +1,11 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
 }
 
-/* Header Styles */
 header {
     background-color: #ffffff;
     padding: 20px;
@@ -16,79 +13,66 @@ header {
 }
 
 .logo {
-    max-width: 150px;
+    width: 150px;
+    height: auto;
 }
 
 h1 {
     font-size: 2rem;
-    color: #002855;
-    margin: 10px 0;
-}
-
-/* Navigation */
-nav {
-    margin: 20px 0;
-}
-
-nav a {
-    background-color: #002855;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    background-color: #00509e;
-}
-
-/* Event Section */
-section {
-    margin: 20px;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.event {
-    margin-bottom: 20px;
-}
-
-h3 {
-    color: #d90429;
+    color: #002366;
+    margin-bottom: 0.5rem;
 }
 
 p {
-    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #333;
 }
 
-/* Footer */
+.event-button {
+    background-color: #002366;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.event-button:hover {
+    background-color: #004080;
+}
+
+.updates {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #002366;
+}
+
+.update {
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.update h3 {
+    color: #c8102e;
+    font-size: 1.5rem;
+}
+
+.update p {
+    color: #000;
+}
+
 footer {
-    background-color: #333;
+    background-color: #002366;
     color: white;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav a {
-        font-size: 1.2rem;
-    }
-
-    section {
-        margin: 10px;
-    }
+    font-size: 0.9rem;
 }
