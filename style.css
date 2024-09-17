@@ -13,8 +13,11 @@ header {
 }
 
 .logo {
-    width: 150px;
+    width: 150px; /* Increase this size */
     height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 h1 {
