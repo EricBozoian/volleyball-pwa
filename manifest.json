@@ -8,19 +8,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "SNHCVB%20app%20192X192.png",
+      "src": "assets/images/SNHCVB-app-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "SNHCVB%20app%20512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "splash_screens": [
-    {
-      "src": "SNHCVB%20app%20512x512.png",
+      "src": "assets/images/SNHCVB-app-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
