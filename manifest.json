@@ -24,21 +24,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": "/index.html",
-  "scope": "/",
-  "description": "Welcome to Southern NH Competitive Volleyball's event page! Stay updated with the latest events.",
-  "screenshots": [
-    {
-      "src": "assets/images/screenshot-1.png",
-      "sizes": "640x1136",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/images/screenshot-2.png",
-      "sizes": "750x1334",
-      "type": "image/png"
-    }
-  ],
-  "lang": "en"
+  ]
 }
