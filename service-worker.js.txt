@@ -4,10 +4,9 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
                 '/index.html',
                 '/style.css',
-                '/assets/images/southern-nh-volleyball-logo.png',
-                '/assets/images/screenshot-1.png',
-                '/assets/images/screenshot-2.png',
-                // Add any additional assets here as needed
+                '/SNHCVB-app-192x192.png',  // Ensure this path is correct
+                '/SNHCVB-app-512x512.png',  // Ensure this path is correct
+                '/manifest.json'
             ]);
         })
     );
